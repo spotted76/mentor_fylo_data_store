@@ -82,6 +82,7 @@ body {
 }
 
 #usage-content {
+    position: relative; /* Needed for the usage bubble*/
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -126,3 +127,54 @@ body {
   #info p {
       margin: .8rem 0;
   }
+
+  #usage-bubble {
+      position: absolute;
+      top: -50px;
+      right: 30px;
+      background: white;
+      border-radius: 1rem;
+      height: 80px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+  #ub-content {
+      position: relative;
+  }
+
+  #usage-bubble > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 1rem;
+  }
+
+
+  #num {
+      color: var(--Very-Dark-Blue);
+      font-size: 5rem;;
+      margin-right: 1rem;
+      font-weight: 700;
+  }
+
+  #units {
+    color: var(--Grayish-Blue);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: .2rem;
+}
+
+#triangle {
+    position: absolute;
+    border-right: solid white 40px;
+    border-top: solid 40px transparent;
+    border-bottom: solid 40px transparent;
+    right: 0;
+    bottom: -40px;
+
+}
