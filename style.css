@@ -1,0 +1,73 @@
+
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);   
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--Very-Dark-Blue);
+    background-image: url("./images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    gap: 2%;
+
+}
+
+/* Common properties between both boxes */
+.purple-box {
+    background: var(--Dark-Blue);
+    border-radius: 5px;
+    height: 215px;
+}
+
+#fylo-box {
+    width: 350px;
+    height: 215px;
+    border-top-right-radius: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+#fylo-box > img {
+    width: 150px;
+    margin-left: 3rem;
+}
+
+#icon-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-left: 3rem;
+}
+
+.icon-border {
+    width: 25px;
+    height: 25px;
+    background: var(--Very-Dark-Blue);
+    padding: 1.5rem;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#usage {
+    flex-grow: 3;
+}
