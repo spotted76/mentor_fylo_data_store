@@ -48,7 +48,7 @@ body {
 }
 
 #fylo-box > img {
-    width: 150px;
+    width: 15rem;
     margin-left: 3rem;
 }
 
@@ -60,8 +60,8 @@ body {
 }
 
 .icon-border {
-    width: 25px;
-    height: 25px;
+    width: 2.5rem;
+    height: 2.5rem;
     background: var(--Very-Dark-Blue);
     padding: 1.5rem;
     border-radius: .8rem;
@@ -82,7 +82,7 @@ body {
 }
 
 #usage-content {
-    position: relative; /* Needed for the usage bubble*/
+    position: relative; /*Needed for the usage bubble*/
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -131,11 +131,11 @@ body {
   #usage-bubble {
       position: absolute;
       top: -50px;
-      right: 30px;
+      right: 3rem;
       background: white;
       border-radius: 1rem;
-      height: 80px;
-      width: 200px;
+      height: 8rem;
+      width: 20rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -143,11 +143,7 @@ body {
 
   }
 
-  #ub-content {
-      position: relative;
-  }
-
-  #usage-bubble > div {
+  #usage-bubble > div:first-child {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -177,4 +173,42 @@ body {
     right: 0;
     bottom: -40px;
 
+}
+
+@media (max-width: 1065px)
+{
+    :root {
+        font-size: 8px;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    #main-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #fylo-box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    #usage {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    #usage-bubble
+    {
+        top: 100%;
+        left: calc(100% - rem);
+        
+    }
+
+    #triangle {
+        display: none;
+    }
 }
