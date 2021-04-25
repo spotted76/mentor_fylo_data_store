@@ -12,7 +12,8 @@ body {
     background: var(--Very-Dark-Blue);
     background-image: url("./images/bg-desktop.png");
     background-repeat: no-repeat;
-    background-position-y: 100%;
+    background-position-y: 50vh;
+    background-size: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -177,18 +178,25 @@ body {
 
 @media (max-width: 1065px)
 {
+    /* Reduce main font size to get items to fit */
     :root {
         font-size: 8px;
     }
 
+    /* Switch to column view, and change the background */
     body {
         flex-direction: column;
+        background-image: url("./images/bg-mobile.png");
+        background-repeat: no-repeat;
+        background-position-y: 0;
     }
 
+    /* Minor adjustments from flex direction change */
     #main-content {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2rem;
     }
 
     #fylo-box {
@@ -204,10 +212,10 @@ body {
     #usage-bubble
     {
         top: 100%;
-        left: calc(100% - rem);
-        
+        right: calc(50% - 10rem); /* Halfway minus half the width of the usage bubble */
     }
 
+    /* No more little triangle hanging off the usage bubble */
     #triangle {
         display: none;
     }
